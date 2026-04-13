@@ -166,9 +166,9 @@ public class Venta
 ```
 <p align="center">
   | 1.
-  <img src="screenshots/(3.1).png" width="45%" />
-  | 2.
   <img src="screenshots/Carpetacrea.png" width="45%" />
+  | 2.
+  <img src="screenshots/(3.1).png" width="45%" />
 </p>
 
 7.  Crear la interfaz en la carpeta Repositorio
@@ -178,7 +178,14 @@ public interface IVentaRepository
     Task<List<Venta>> ObtenerVentasAsync();
 }
 ```
+<p align="center">
+  | 1.
+  <img src="screenshots/(4)clase,interfaz.png" width="45%" />
+  | 2.
+  <img src="screenshots/(4.1).png" width="45%" />
+</p>
 8.  Crear la clase VentaRepository.cs
+
   ```csharp
 public class VentaRepository : IVentaRepository
 {
@@ -189,10 +196,15 @@ public class VentaRepository : IVentaRepository
         return new List<Venta>
         {
             new Venta { Id = 1, Producto = "Laptop", Categoria = "Tecnología", Cantidad = 2, PrecioUnitario = 550m, Fecha = DateTime.Now.AddDays(-1) },
-            new Venta { Id = 2, Producto = "Mouse", Categoria = "Tecnología", Cantidad = 5, PrecioUnitario = 20m, Fecha = DateTime.Now.AddDays(-2) }
-        };
-    }
+            new Venta { Id = 2, Producto = "Mouse", Categoria = "Tecnología", Cantidad = 5, PrecioUnitario = 20m, Fecha = DateTime.Now.AddDays(-2) },
+            new Venta { Id = 3, Producto = "Teclado", Categoria = "Tecnología", Cantidad = 3, PrecioUnitario = 35m, Fecha = DateTime.Now.AddDays(-3) },
+            new Venta { Id = 4, Producto = "Silla", Categoria = "Oficina", Cantidad = 2, PrecioUnitario = 120m, Fecha = DateTime.Now.AddDays(-2) },
+            new Venta { Id = 5, Producto = "Escritorio", Categoria = "Oficina", Cantidad = 1, PrecioUnitario = 250m, Fecha = DateTime.Now.AddDays(-4) },
+            new Venta { Id = 6, Producto = "Monitor", Categoria = "Tecnología", Cantidad = 4, PrecioUnitario = 180m, Fecha = DateTime.Now.AddDays(-1) }       
+        }
+    };
 }
+
 ```
 9.  Crear el servicio en la carpeta Servicios
   ```csharp
